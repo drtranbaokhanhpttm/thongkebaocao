@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THUẬT TOÁN THỐNG KÊ BÁO CÁO</title>
+  <link rel="stylesheet" href="styles.css?v=20260624-final">
+</head>
+<body>
+  <main class="app-shell simple-shell">
+    <section class="simple-hero compact-hero">
+      <p class="eyebrow">Thống kê báo cáo</p>
+      <h1>THUẬT TOÁN THỐNG KÊ BÁO CÁO</h1>
+      <p class="hero-copy">Chọn ngày để cập nhật dữ liệu và xem kết quả ngay.</p>
+    </section>
+
+    <section class="panel today-panel compact-panel">
+      <div class="top-toolbar">
+        <input id="dateInput" type="date" class="dream-text date-main">
+        <a class="primary-button link-btn" href="https://xskt.com.vn/xsmb" target="_blank" rel="noopener">Kết quả XSMB ↗</a>
+      </div>
+      <details class="gpt-collapse">
+        <summary>GPT (tùy chọn)</summary>
+        <div class="gpt-key-row">
+          <input id="gptKeyInput" type="password" class="dream-text" placeholder="Nhập API key">
+          <button id="saveGptKeyBtn" class="primary-button" type="button" style="background:var(--accent)">Lưu key</button>
+        </div>
+        <p class="simple-note" style="margin-top:8px;text-align:left;font-size:.78rem">⚠️ Key chỉ lưu trên trình duyệt này.</p>
+      </details>
+      <div id="result" class="today-result">
+        <div class="shortlist-empty">Đang tải dữ liệu...</div>
+      </div>
+      <div id="holdoutResult" class="today-result">
+        <div class="shortlist-empty">Đang chạy kiểm định 30 ngày...</div>
+      </div>
+    </section>
+
+    <section class="panel compact-panel log-panel">
+      <div class="top-toolbar log-toolbar">
+        <strong>📒 Nhật ký dự đoán</strong>
+        <button id="exportLogsBtn" class="primary-button" type="button">Xuất JSON</button>
+        <button id="clearLogsBtn" class="primary-button" type="button" style="background:var(--warn)">Xóa tất cả</button>
+      </div>
+      <div id="logResult" class="today-result">
+        <div class="shortlist-empty">Chưa có nhật ký.</div>
+      </div>
+    </section>
+
+    <p class="simple-note">Thống kê chỉ mang tính tham khảo.</p>
+  </main>
+
+  <script src="xsmb-history.js?v=20260624-final"></script>
+  <script src="xsmb-reference.js?v=20260624-final"></script>
+  <script src="app.js?v=20260625-top2next3"></script>
+</body>
+</html>
